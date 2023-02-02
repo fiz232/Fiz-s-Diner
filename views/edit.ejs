@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit food entry</title>
+    <%-include("./partials/editPage.ejs")%>
+  </head>
+  <body>
+    <div class="login-page">
+      <div class="form">
+        <div class="login">
+          <div class="login-header">
+    <form action="/order/<%=orders.id%>?_method=PUT" method="POST">
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name" value="<%=orders.name%>" />
+      <br />
+      <label for="img">Image link</label>
+      <input type="text" name="img" id="img" value="<%=orders.img%>" />
+      <br />
+      <label for="price">Price</label>
+      <input
+        type="number"
+        name="price"
+        min="0"
+        step=".01"
+        value="<%=orders.price%>"
+      />
+      <br />
+      <label for="description">Description</label>
+      <input
+        type="textarea"
+        name="description"
+        id="description"
+        value="<%=orders.description%>"
+      /><br /><br />
+      <button type="submit" class="btn">Edit Food Entry</button>
+      <br><br>
+      <a href="/order" class="btn" role="button">Back</a>
+    </form>
+  </div>
+</div>
+  </body>
+</html>

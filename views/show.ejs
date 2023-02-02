@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%=orders.name%></title>
+    <%-include("./partials/header.ejs")%>
+  </head>
+  <body class="text-center">
+    <nav><%-include("./partials/nav.ejs")%></nav>
+    <br /><br /><br /><br />
+    <div class="card mb-3" id="show">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img
+            class="img-fluid rounded-start"
+            src="<%=orders.img%>"
+            alt="An image of <%=orders.name%>"
+          />
+        </div>
+        <div class="col-md-8">
+          <h1 class="card-title"><%=orders.name%></h1>
+          <div class="card-body">
+            <p class="card-text text-wrap"><%=orders.description%></p>
+            <br /><br />
+            <h5 class="card-text">RM<%=orders.price %></h5>
+            <br /><br />
+            <div class="d-grid gap-2 col-5 mx-auto">
+              <%if(user && user.isAdmin){%>
+              <a
+                href="/order/<%=orders.id%>/edit"
+                class="btn btn-outline-secondary"
+                role="button"
+                >Edit</a
+              >
+              <form action="/order/<%=orders.id%>?_method=DELETE" method="POST">
+                <button type="submit" class="btn btn-outline-secondary col-12">
+                  Delete
+                </button>
+              </form>
+              <%} else {%>
+              <a href="/cart" class="btn btn-outline-secondary" role="button"
+                >Add to cart</a
+              >
+              <%}%>
+              <a href="/order" class="btn btn-outline-secondary" role="button"
+                >Back</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <%-include("./partials/footer.ejs")%>
+</html>

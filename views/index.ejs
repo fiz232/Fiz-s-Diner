@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fiz's Diner </title>
+    <%-include("./partials/header.ejs")%>
+  </head>
+  <body>
+    <nav><%-include("./partials/nav.ejs")%></nav>
+    <br><br><br><br><br>
+    <%-include("./partials/slideshow.ejs")%>
+    <br>
+    <div class="container text-center row row-cols-md-3 g-5">
+        <% for(let i=0; i<order.length; i++) {%>
+          <div class="col">
+          <div class="card" style="width: 18rem">
+        <a href="/order/<%=order[i].id%>"
+          ><img
+            src="<%=order[i].img%>"
+            class="card-img-top"
+            id="homepage"
+            alt="An image of <%=order[i].name%>"/></a>
+        <div class="card-body">
+          <h3 class="card-title"><%=order[i].name%></h3>
+          <h6 class="card-text">RM<%=order[i].price%></h6>
+          <a href="/cart" class="btn btn-outline-secondary" role="button">Add to cart</a>
+        </div>
+      </div>
+      </div>
+        <%}%>
+      </div>
+    <br><br>
+    <%if(user && user.isAdmin){%>
+    <a href="/order/new" class="btn btn-outline-secondary" id="newEntry" role="button" >Add new food entry</a><%}%>
+  </body>
+  <%-include("./partials/footer.ejs")%>
+</html>

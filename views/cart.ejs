@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My cart</title>
+    <%-include("./partials/editPage.ejs")%>
+    <%-include("./partials/header.ejs")%>
+  </head>
+  <body>
+    <nav><%-include("./partials/nav.ejs")%></nav>
+    <div class="login-page">
+      <div class="form">
+        <div class="login">
+          <div class="login-header">
+            <br><br><br><br>
+            <h3>Your cart is empty</h3>
+            <br><br><br><br><br><br>
+      <button type="submit" class="btn">Checkout</button>
+      <br><br>
+      <a href="/order" class="btn" role="button">Back</a>
+  </div>
+</div>
+  </body>
+</html>
