@@ -27,7 +27,6 @@ Welcome to Fiz's Diner. An online application that offers customers to order del
 ## Future note to self & Improvements to be made
 
 - Add the "add to cart" function
-- Implement the "auto sign-in after sign-up" function
 - Make the "invalid username or password" error message appear on the login page itself
 - Add the user welcome page (Welcome "username") so that customer knows they login successfully 
 - Categorize different type of food and show them in different tabs
