@@ -23,9 +23,11 @@
 - Bootstrap
 - Popper
 
-## Future note to self
+## Future note to self & Improvements to be made
 
 - Add the "add to cart" function
+- Implement the "auto sign-in after sign-up" function
+- Categorize different type of food and show them in different tabs
 
 ## Link to application
 
