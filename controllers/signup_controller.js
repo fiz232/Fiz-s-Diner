@@ -19,6 +19,7 @@ router.post("/", (req, res) => {
       console.log(err);
     } else {
       console.log("Successfully Created User: " + createdUser.username);
+      req.session.user = createdUser;
       res.redirect("/order");
     }
   });
