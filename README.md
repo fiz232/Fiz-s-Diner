@@ -1,6 +1,7 @@
 # Fiz's Diner
 
 ## Online food ordering application
+Welcome to Fiz's Diner. An online application that offers customers to order delicious western food.
 
 ## Challenges
 
