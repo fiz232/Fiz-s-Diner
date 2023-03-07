@@ -1,13 +1,7 @@
 # Fiz's Diner
 
 ## Online food ordering application
-Welcome to Fiz's Diner. An online application that offers customers to order delicious western food.
-
-## Challenges
-
-- Bootstrap helped alot with styling of the application, but also messed up some of the functionalities. For example, buttons did not work after drop-down menu is added and vise versa. But fortunately it was fixed by changing all button tags in the ejs files with <a> tag with "btn" class.
-- For unknown reason, clicking on the "delete" button triggers the logout function after the drop-down menu was implemented, but was fixed by changing the logout route.
-- I could not figure out how to implement the "add to cart" function and link it to the responding buttons.
+Welcome to Fiz's Diner, a food ordering app made with MEN-stack and EJS. In this app, user can browse the food and add their favorite food to cart if they are logged in. An admin account allows creating, editing and deleting food entries.
 
 ## Technology in use
 
